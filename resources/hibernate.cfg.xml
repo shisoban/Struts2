@@ -21,5 +21,6 @@
   <!-- Drop and re-create the database schema on startup -->
   <property name="hbm2ddl.auto">update</property>
   <mapping class="com.virtusa.micros.model.Contact"/>
+  <mapping resource="Users.hbm.xml"/>
  </session-factory>
 </hibernate-configuration>

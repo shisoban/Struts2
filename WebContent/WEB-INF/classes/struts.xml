@@ -9,21 +9,35 @@
 	<!-- <constant name="struts.ui.theme" value="bootstrap" /> -->
 
 	<package name="default" extends="struts-default" namespace="/">
+	
+        <action name="login" class="com.virtusa.micros.view.LoginAction">
+            <result name="success">/dashboard.html</result>
+            <result name="input">/index.jsp</result>
+        </action>
 
 		<action name="add"
 			class="com.virtusa.micros.view.ContactAction" method="add">
-			<result name="success" type="chain">register</result>
+			<result name="success" type="chain">myLabor</result>
 			<result name="input" type="chain">register</result>
 		</action>
 
 		<action name="delete"
 			class="com.virtusa.micros.view.ContactAction" method="delete">
-			<result name="success" type="chain">register</result>
+			<result name="success" type="chain">myLabor</result>
 		</action>
-
-		<action name="register"
+		
+		<action name="dashboard">
+      		<result>/dashboard.html</result>
+   		</action>
+   		
+   		<action name="register">
+      		<result>/register.jsp</result>
+   		</action>
+   		
+   		<action name="myLabor"
 			class="com.virtusa.micros.view.ContactAction">
-			<result name="success">register.jsp</result>
+			<result name="success">myLabor.jsp</result>
 		</action>
+		
 	</package>
 </struts>

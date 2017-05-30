@@ -1,3 +1,7 @@
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+
+<%@ taglib prefix="sb" uri="/struts-bootstrap-tags" %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -49,11 +53,19 @@
 	                                <hr class="right">
 	                            </div>
 	                        </div>
-			                <input class="form-control" type="text" placeholder="Username">
+	    <s:actionerror/>
+        <s:form action="login">
+            <s:textfield name="user.uname" label="Name" cssClass="col-sm-12"/>
+            <s:password name="user.pwd" label="Password" cssClass="col-sm-12"/>
+            <s:submit value="Login"/>
+        </s:form>
+			                <!-- <input class="form-control" type="text" placeholder="Username">
 			                <input class="form-control" type="password" placeholder="Password">
 			                <div class="action">
 			                    <a class="btn btn-primary signup" href="index.html">Login</a>
-			                </div>                
+			                </div>       -->   
+			                
+			                       
 			            </div>
 			        </div>
 
